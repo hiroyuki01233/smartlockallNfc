@@ -18,7 +18,7 @@ close_key_words = ["閉めて","閉める","閉","close","閉じろ","閉まる"
 user = userInfo.USER_ID
 
 def getNewMessage():
-    conn = sqlite3.connect("../app/linebot/history.db")
+    conn = sqlite3.connect("/var/apps/smartLock/linebot/history.db")
 
     c = conn.cursor()
 
@@ -58,7 +58,7 @@ def database_history(name,mess):
     dt_now = str(dt_now)
     dt_now = dt_now[:20]
 
-    conn = sqlite3.connect('../app/linebot/history.db')
+    conn = sqlite3.connect('/var/apps/smartLock/linebot/history.db')
 
     c = conn.cursor()
     userName = user[name]
